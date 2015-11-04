@@ -10,10 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var feed: Feed?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let services = Services()
-        services.getMostPopularApps()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 100
+        let feedsManager = FeedsManager()
+        feedsManager.getMostPopularApps()
+        feedsManager.onCompletion = { (loadedFeed) -> () in
+            self.feed = loadedFeed
+            self.tableView.reloadData()
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -24,5 +32,28 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: UITableViewDataSource {
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let count = feed?.entries.count {
+            return count
+        }
+        return 0
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("appCell", forIndexPath: indexPath) as! AppTableViewCell
+        cell.appTitleLabel.text = feed?.entries[indexPath.row].name
+        cell.appArtistLabel.text = feed?.entries[indexPath.row].artist
+        cell.appCategoryLabel.text = feed?.entries[indexPath.row].appCategory.label
+        return cell
+
+    }
 }
 

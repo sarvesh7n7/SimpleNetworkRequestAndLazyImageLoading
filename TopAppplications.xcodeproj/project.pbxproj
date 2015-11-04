@@ -137,18 +137,11 @@
 		65378E011BE8372200EA865F /* TopAppplications */ = {
 			isa = PBXGroup;
 			children = (
-				65378E021BE8372200EA865F /* AppDelegate.swift */,
-				65378E041BE8372200EA865F /* ViewController.swift */,
-				654425B21BEA60EE00CB1E26 /* AppTableViewCell.swift */,
-				654425B01BEA5CA400CB1E26 /* FeedsManager.swift */,
-				652B6A9B1BE853130031D380 /* Services.swift */,
-				654425A81BE995B400CB1E26 /* Services+Feed.swift */,
-				652E23351BE9825C007A3098 /* FeedsProtocol.swift */,
-				654425AA1BE9964700CB1E26 /* FeedsModel.swift */,
-				654425A41BE9932A00CB1E26 /* AppCategoryProtocol.swift */,
-				654425AE1BE9968B00CB1E26 /* AppCategoryModel.swift */,
-				652E23371BE98844007A3098 /* AppDetailsProtocol.swift */,
-				654425AC1BE9966E00CB1E26 /* AppDetailsModel.swift */,
+				654425B41BEA828C00CB1E26 /* AppDelegate */,
+				654425B81BEA82CE00CB1E26 /* Services */,
+				654425B61BEA82B400CB1E26 /* Manager */,
+				654425BA1BEA832F00CB1E26 /* Models */,
+				654425B51BEA829900CB1E26 /* ViewControllers */,
 				654425A61BE9946600CB1E26 /* FeedsServiceProtocol.swift */,
 				65378E061BE8372200EA865F /* Main.storyboard */,
 				65378E091BE8372200EA865F /* Assets.xcassets */,
@@ -175,6 +168,61 @@
 				65378E241BE8372200EA865F /* Info.plist */,
 			);
 			path = TopAppplicationsUITests;
+			sourceTree = "<group>";
+		};
+		654425B41BEA828C00CB1E26 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				65378E021BE8372200EA865F /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		654425B51BEA829900CB1E26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				654425B91BEA82EA00CB1E26 /* TableViewCells */,
+				65378E041BE8372200EA865F /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		654425B61BEA82B400CB1E26 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				654425B01BEA5CA400CB1E26 /* FeedsManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		654425B81BEA82CE00CB1E26 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				652B6A9B1BE853130031D380 /* Services.swift */,
+				654425A81BE995B400CB1E26 /* Services+Feed.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		654425B91BEA82EA00CB1E26 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				654425B21BEA60EE00CB1E26 /* AppTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		654425BA1BEA832F00CB1E26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				652E23351BE9825C007A3098 /* FeedsProtocol.swift */,
+				654425AA1BE9964700CB1E26 /* FeedsModel.swift */,
+				654425A41BE9932A00CB1E26 /* AppCategoryProtocol.swift */,
+				654425AE1BE9968B00CB1E26 /* AppCategoryModel.swift */,
+				652E23371BE98844007A3098 /* AppDetailsProtocol.swift */,
+				654425AC1BE9966E00CB1E26 /* AppDetailsModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C4303A0E0EA05E5DEDABB95C /* Frameworks */ = {

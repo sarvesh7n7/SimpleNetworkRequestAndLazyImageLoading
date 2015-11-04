@@ -12,14 +12,20 @@ import SwiftyJSON
 
 class Services {
 
+    var onCompletion: ((JSON) -> ())?
+
+    //for now handling only success cases.
+    var onSuccess: ((JSON) -> ())?
+    var onFailue: ((JSON) -> ())?
+    
     func sendNetworkRequestWithURL(url:String) {
         Alamofire.request(.GET, url)
             .responseJSON { response in
                 if let responseValue = response.result.value {
-                    //print("JSON: \(responseValue)")
-                    let somevar = JSON(responseValue)
-                    let feedsmodel = FeedsModel(feedsJson: somevar["feed"])
-                    print(feedsmodel)
+                    let jsonResponse = JSON(responseValue)
+                    print("\(__FILE__) \(jsonResponse)")
+                    self.onCompletion?(jsonResponse)
+
                 }
         }
     }

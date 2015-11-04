@@ -31,11 +31,10 @@ class FeedsModel: Feed {
         if let entries = feedsJson["entry"].array {
             self.entries = []
             for currentEntry in entries {
-                let appDetails = AppDetailsModel(appDetailsJson: currentEntry)
+                let appDetails = FeedsManager.getAppDetailsInstance(currentEntry)
                 self.entries.append(appDetails)
             }
         }
-        print("the object is fully constructed may be")
     }
 
 }

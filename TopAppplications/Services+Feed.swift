@@ -11,7 +11,7 @@ import Foundation
 extension Services: FeedsServiceProtocol {
     func getMostPopularApps() {
         //some code to do the network requests. 
-        let requestURL = "http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=10/json"
+        let requestURL = "http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=30/json"
         sendNetworkRequestWithURL(requestURL)
     }
 }

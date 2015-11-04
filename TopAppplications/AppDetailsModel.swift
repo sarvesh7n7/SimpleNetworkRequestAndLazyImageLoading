@@ -59,9 +59,8 @@ class AppDetailsModel: AppDetails {
         }
         if let appCategoryDict = appDetailsJson["category"].dictionary {
             if let appCategory = appCategoryDict["attributes"] {
-                self.appCategory = AppCategoryModel(appCategoryJson: appCategory)
+                self.appCategory = FeedsManager.getAppCategoryInstance(appCategory)
             }
-
         }
     }
 }
