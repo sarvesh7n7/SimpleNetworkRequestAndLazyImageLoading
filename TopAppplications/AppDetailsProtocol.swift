@@ -17,6 +17,7 @@ protocol AppDetails {
     var rights: String { get }
     var artist: String { get }
     var releaseDate: String { get }
+    var appImage: AppImage { get }
     var appCategory: AppCategory { get }
 
 

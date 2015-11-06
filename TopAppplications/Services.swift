@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class Services {
 
-    var onCompletion: ((JSON) -> ())?
+    var onCompletion: ((AnyObject) -> ())?
 
     //for now handling only success cases.
     var onSuccess: ((JSON) -> ())?
@@ -22,11 +22,8 @@ class Services {
         Alamofire.request(.GET, url)
             .responseJSON { response in
                 if let responseValue = response.result.value {
-                    let jsonResponse = JSON(responseValue)
-                    print("\(__FILE__) \(jsonResponse)")
-                    self.onCompletion?(jsonResponse)
-
+                    self.onCompletion?(responseValue)
                 }
-        }
+            }
     }
 }

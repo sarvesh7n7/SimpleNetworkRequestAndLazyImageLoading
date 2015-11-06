@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C9880A4-7DC0-4A58-B20E-DEB92DDA71D0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TopAppplications</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D9A18330623C557915739AE682EEB889D2E36014</key>
+		<string>https://github.com/sarvesh7n7/SimpleNetworkRequestAndLazyImageLoading.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TopAppplications.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D9A18330623C557915739AE682EEB889D2E36014</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sarvesh7n7/SimpleNetworkRequestAndLazyImageLoading.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D9A18330623C557915739AE682EEB889D2E36014</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D9A18330623C557915739AE682EEB889D2E36014</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TopAppplications</string>
+		</dict>
+	</array>
+</dict>
+</plist>

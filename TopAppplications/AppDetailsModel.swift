@@ -18,6 +18,7 @@ class AppDetailsModel: AppDetails {
     var rights: String
     var artist: String
     var releaseDate: String
+    var appImage: AppImage
     var appCategory: AppCategory
 
     init() {
@@ -29,6 +30,9 @@ class AppDetailsModel: AppDetails {
         rights =  ""
         artist =  ""
         releaseDate =  ""
+
+        //should not access the model
+        appImage = AppImageModel()
         appCategory = AppCategoryModel()
     }
     convenience init(appDetailsJson: JSON) {
@@ -56,6 +60,10 @@ class AppDetailsModel: AppDetails {
         }
         if let releaseDate = appDetailsJson["im:releaseDate"]["label"].string {
             self.releaseDate = releaseDate
+        }
+
+        if let imageURL = appDetailsJson["im:image"][2]["label"].string {
+            self.appImage = FeedsManager.getAppImageInstance(imageURL)
         }
         if let appCategoryDict = appDetailsJson["category"].dictionary {
             if let appCategory = appCategoryDict["attributes"] {

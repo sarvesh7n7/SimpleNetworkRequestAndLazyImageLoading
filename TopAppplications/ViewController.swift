@@ -52,6 +52,20 @@ extension ViewController: UITableViewDataSource {
         cell.appTitleLabel.text = feed?.entries[indexPath.row].name
         cell.appArtistLabel.text = feed?.entries[indexPath.row].artist
         cell.appCategoryLabel.text = feed?.entries[indexPath.row].appCategory.label
+
+        if let appImage = feed?.entries[indexPath.row].appImage {
+            if !appImage.isDownloaded {
+                cell.appImageView.image = appImage.appImage
+                appImage.downloadImage({ () -> () in
+                    cell.appImageView.image = appImage.appImage
+                })
+            }
+            else {
+                cell.appImageView.image = appImage.appImage
+            }
+        }
+
+
         return cell
 
     }

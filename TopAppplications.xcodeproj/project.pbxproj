@@ -28,6 +28,10 @@
 		654425B11BEA5CA400CB1E26 /* FeedsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654425B01BEA5CA400CB1E26 /* FeedsManager.swift */; settings = {ASSET_TAGS = (); }; };
 		654425B31BEA60EE00CB1E26 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654425B21BEA60EE00CB1E26 /* AppTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		65B020D71BE837E100BB209B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 65B020D61BE837E100BB209B /* Podfile */; };
+		65B373EB1BEAF8A100EDABCD /* AppImageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B373EA1BEAF8A100EDABCD /* AppImageProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		65B373ED1BEAFB0C00EDABCD /* AppImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B373EC1BEAFB0C00EDABCD /* AppImageModel.swift */; settings = {ASSET_TAGS = (); }; };
+		65B373EF1BEAFD7000EDABCD /* Services+AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B373EE1BEAFD7000EDABCD /* Services+AppImage.swift */; settings = {ASSET_TAGS = (); }; };
+		65B373F11BEB007000EDABCD /* ImageDownloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B373F01BEB007000EDABCD /* ImageDownloadProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		82C7FC7C79954894A79B6BAF /* Pods_TopAppplications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EE6A99B3135391F930AC06D /* Pods_TopAppplications.framework */; };
 		EFB72E385B15CC281FE9BA35 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B259C13C7844B199745F09C1 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,10 @@
 		654425B01BEA5CA400CB1E26 /* FeedsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsManager.swift; sourceTree = "<group>"; };
 		654425B21BEA60EE00CB1E26 /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		65B020D61BE837E100BB209B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		65B373EA1BEAF8A100EDABCD /* AppImageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageProtocol.swift; sourceTree = "<group>"; };
+		65B373EC1BEAFB0C00EDABCD /* AppImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppImageModel.swift; sourceTree = "<group>"; };
+		65B373EE1BEAFD7000EDABCD /* Services+AppImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Services+AppImage.swift"; sourceTree = "<group>"; };
+		65B373F01BEB007000EDABCD /* ImageDownloadProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadProtocol.swift; sourceTree = "<group>"; };
 		B259C13C7844B199745F09C1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD563D784DE3F8A9ACD90C8D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +150,6 @@
 				654425B61BEA82B400CB1E26 /* Manager */,
 				654425BA1BEA832F00CB1E26 /* Models */,
 				654425B51BEA829900CB1E26 /* ViewControllers */,
-				654425A61BE9946600CB1E26 /* FeedsServiceProtocol.swift */,
 				65378E061BE8372200EA865F /* Main.storyboard */,
 				65378E091BE8372200EA865F /* Assets.xcassets */,
 				65378E0B1BE8372200EA865F /* LaunchScreen.storyboard */,
@@ -199,7 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				652B6A9B1BE853130031D380 /* Services.swift */,
+				654425A61BE9946600CB1E26 /* FeedsServiceProtocol.swift */,
 				654425A81BE995B400CB1E26 /* Services+Feed.swift */,
+				65B373F01BEB007000EDABCD /* ImageDownloadProtocol.swift */,
+				65B373EE1BEAFD7000EDABCD /* Services+AppImage.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -221,6 +231,8 @@
 				654425AE1BE9968B00CB1E26 /* AppCategoryModel.swift */,
 				652E23371BE98844007A3098 /* AppDetailsProtocol.swift */,
 				654425AC1BE9966E00CB1E26 /* AppDetailsModel.swift */,
+				65B373EA1BEAF8A100EDABCD /* AppImageProtocol.swift */,
+				65B373EC1BEAFB0C00EDABCD /* AppImageModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -427,17 +439,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B373F11BEB007000EDABCD /* ImageDownloadProtocol.swift in Sources */,
 				65378E051BE8372200EA865F /* ViewController.swift in Sources */,
 				652B6A9C1BE853130031D380 /* Services.swift in Sources */,
 				652E23381BE98844007A3098 /* AppDetailsProtocol.swift in Sources */,
 				654425B11BEA5CA400CB1E26 /* FeedsManager.swift in Sources */,
 				654425A91BE995B400CB1E26 /* Services+Feed.swift in Sources */,
+				65B373EF1BEAFD7000EDABCD /* Services+AppImage.swift in Sources */,
 				654425A51BE9932A00CB1E26 /* AppCategoryProtocol.swift in Sources */,
 				654425AB1BE9964700CB1E26 /* FeedsModel.swift in Sources */,
+				65B373EB1BEAF8A100EDABCD /* AppImageProtocol.swift in Sources */,
 				654425B31BEA60EE00CB1E26 /* AppTableViewCell.swift in Sources */,
 				65378E031BE8372200EA865F /* AppDelegate.swift in Sources */,
 				652E23361BE9825C007A3098 /* FeedsProtocol.swift in Sources */,
 				654425AD1BE9966E00CB1E26 /* AppDetailsModel.swift in Sources */,
+				65B373ED1BEAFB0C00EDABCD /* AppImageModel.swift in Sources */,
 				654425A71BE9946600CB1E26 /* FeedsServiceProtocol.swift in Sources */,
 				654425AF1BE9968B00CB1E26 /* AppCategoryModel.swift in Sources */,
 			);

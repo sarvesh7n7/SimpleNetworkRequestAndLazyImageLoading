@@ -18,14 +18,15 @@ class FeedsManager {
 
     func getMostPopularApps() {
         services.getMostPopularApps()
-        services.onCompletion = { (jsonResponse) -> () in
+        services.onCompletion = { (responseValue) -> () in
+            let jsonResponse = JSON(responseValue)
             let feedsInstance = FeedsManager.getFeedsInstance(jsonResponse["feed"])
             self.onCompletion?(feedsInstance)
-
         }
-
     }
-    //initialize the instances of model from given SwiftyJSON object
+
+
+    //initialize the instances of models
     class func getFeedsInstance(feedsJson: JSON) -> Feed {
         let feeds = FeedsModel(feedsJson: feedsJson)
         return feeds
@@ -41,6 +42,10 @@ class FeedsManager {
         return appCategory
     }
 
+    class func getAppImageInstance(appImageURl: String) -> AppImage {
+        let appImage = AppImageModel(imageURL: appImageURl)
+        return appImage
+    }
 
 
 }
